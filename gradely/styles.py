@@ -13,11 +13,11 @@ hover_accent_bg = {"_hover": {"bg": accent_color}}
 content_width_vw = "90vw"
 sidebar_width = "20em"
 
-template_page_style = {"padding_top": "5em", "padding_x": ["auto", "2em"], "flex": "1"}
+template_page_style = {"padding_top": "5em", "padding_x": ["auto", "2em"], "flex": "1", "background_color": "#F8F6F5",}
 
 template_content_style = {
     "align_items": "flex-start",
-    "box_shadow": box_shadow,
+    # "box_shadow": box_shadow,
     "border_radius": border_radius,
     "padding": "1em",
     "margin_bottom": "2em",
@@ -36,17 +36,17 @@ overlapping_button_style = {
 }
 
 base_style = {
-    "menu.button": {
+    rx.chakra.MenuButton: {
         "width": "3em",
         "height": "3em",
         **overlapping_button_style,
     },
-    "menu.item": hover_accent_bg,
+    rx.chakra.MenuItem: hover_accent_bg,
 }
 
 markdown_style = {
-    "code": lambda text: rx.code(text, color="#1F1944", bg="#EAE4FD"),
-    "a": lambda text, **props: rx.link(
+    "code": lambda text: rx.chakra.code(text, color="#1F1944", bg="#EAE4FD"),
+    "a": lambda text, **props: rx.chakra.link(
         text,
         **props,
         font_weight="bold",
