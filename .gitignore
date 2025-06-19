@@ -1,4 +1,4 @@
 *.db
 *.py[cod]
 .web
-__pycache__/
+__pycache__/test_additional_tooling/*.json
