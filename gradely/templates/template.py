@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from gradely import styles
-from gradely.components.sidebar import sidebar
+# from gradely.components.sidebar import sidebar
 from typing import Callable
 
 import reflex as rx
@@ -112,7 +112,7 @@ def template(
         )
         def templated_page():
             return rx.chakra.hstack(
-                sidebar(),
+                # sidebar(),
                 rx.chakra.box(
                     rx.chakra.box(
                         page_content(),
